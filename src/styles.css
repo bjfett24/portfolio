@@ -1,22 +1,22 @@
 h1 {
-  color: red;
+    color: red;
 }
 
 .content.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile {
-  width: 200px;
-  height: auto;
+    width: 200px;
+    height: auto;
 }
 
 .about {
-  display: flex;
-  gap: 1.5rem;
-  margin: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem;
 }
 /* 
 .bio {
@@ -24,43 +24,68 @@ h1 {
 
 */
 .name {
-  box-sizing: border-box;
-  color: white;
-  text-align: center;
-  transform: translateY(-100%);
-  padding: 10px;
-  margin: 0px;
-}
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    transform: translateY(-100%);
+    padding: 10px;
+    margin: 0px;
+} 
 
 .section-2 {
-  margin: 3rem;
-  display: flex;
-  flex-direction: column;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .my-work.container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .project {
-  border: 1px solid black;
-  width: 350px;
-  height: 450px;
+    border: 1px solid black;
+    width: 350px;
+    height: 450px;
 }
 
 .project .image.container {
-  width: 100%;
-  height: 60%;
+    width: 100%;
+    height: 60%;
 }
 
 .words.container {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .num0 .image {
-  background-image: url("./img/tic-tac-toe.jpg");
-  background-size: 155% auto;
-  background-position: center center;
+    background-image: url('./img/weather-app.jpg');
+    background-size: cover;
+}
+
+.num1 .image {
+    background-image: url('./img/tic-tac-toe.jpg');
+    background-size: 155% auto;
+    background-position: center center;
+}
+
+.num2 .image {
+    background-image: url('./img/battle-ship.jpg');
+    background-size: cover;
+}
+
+.num3 .image {
+    background-image: url('./img/admin.jpg');
+    background-size: cover;
+}
+
+.num4 .image {
+    background-image: url('./img/to-do.jpg');
+    background-size: cover;
+}
+
+.num5 .image {
+    background-image: url('./img/sign-up.jpg');
+    background-size: cover;
 }
