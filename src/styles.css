@@ -1,7 +1,21 @@
+@font-face {
+    font-family: 'louis_george';
+    src: url('./fonts/louis-george/louis_george_cafe-webfont.woff2') format('woff2'),
+         url('./fonts/louis-george/louis_george_cafe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body, :root {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .content.main {
@@ -54,6 +68,12 @@ body, :root {
     line-height: 1.5;
 }
 
+.bio .git-icon {
+    color: black;
+    width: 2rem;
+    height: 2rem;
+}
+
 .name {
     box-sizing: border-box;
     color: white;
@@ -78,7 +98,8 @@ body, :root {
 .project {
     border: 2px solid white;
     width: 30%;
-    height: 450px;
+    min-height: 460px;
+    max-height: 500px;
     box-sizing: border-box;
     margin: 1rem;
     box-shadow: 2px 2px 8px 8px rgb(0, 0, 0, 0.10);
@@ -101,9 +122,19 @@ body, :root {
 
 }
 
-.words.container {
-    padding: 0.5rem 1rem 0.5rem 1rem;
+.project .title {
+    margin: 8px
+}
 
+p.description {
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0px;
+    color: rgb(139, 139, 139);
+}
+
+.words.container {
+padding: 1rem;
 }
 
 .num0 .image {
@@ -139,10 +170,43 @@ body, :root {
 
 .contact.container {
     display: flex;
-    gap: 1rem;
+    box-sizing: border-box;
+    background-color: rgb(95, 124, 239);
+    width: 100vw;
+    padding: 4rem;
+    justify-content: space-between;
+    color: white;
+}
+
+.contact .words {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.714)
+}
+
+.contact .title {
+    color: white;
+}
+
+.line {
+    padding: 0px;
+    margin: 0px;
+}
+
+.email {
+    margin-top: 0px;
+}
+
+.phone-number {
+    margin-bottom: 0px;
 }
 
 .picture {
-    width: 400px;
-    height: auto;
+    height: 500px;
+    border-radius: 15px;
+    border: 2px solid white;
+    margin-left: 20px;
+}
+
+.note {
+    max-width: 30ch;
 }

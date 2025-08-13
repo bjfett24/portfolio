@@ -1,5 +1,6 @@
 import coverImgSrc from "./img/Profile.JPG";
 import footImgSrc from "./img/ben-guitar.jpg";
+import { SVG } from './create-svg.js';
 
 function pageLoad() {
   const content = document.createElement("div");
@@ -45,8 +46,12 @@ function pageLoad() {
 
   const bioIcons = document.createElement('div');
   bioIcons.classList.add('icons');
-  bioIcons.textContent = 'bio icons go here';
   bio.appendChild(bioIcons);
+
+  const git = new SVG('git-icon', '0 0 24 24', "M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z");
+  const gitIcon = git.createSVG();
+  gitIcon.role = 'button';
+  bioIcons.appendChild(gitIcon);
 
   const section2 = document.createElement("div");
   section2.classList.add("section-2");
@@ -105,7 +110,7 @@ function pageLoad() {
     tttTitle.textContent = 'Tic Tac Toe';
 
     const tttDesc = document.querySelector('.num1 .description');
-    tttDesc.textContent = 'A simple, yet logically accurate version of the classic game, Tic Tac Toe. Play against a friend and watch as this program will keep track of whose turn it is and the winner of the game!';
+    tttDesc.textContent = 'A simple, yet sharp version of the classic game, Tic Tac Toe. Play against a friend and this program will keep track of whose turn it is and declare the winner of the game!';
 
     const battleShipsTitle = document.querySelector('.num2 .title');
     battleShipsTitle.textContent = 'Battle Ship';
@@ -154,12 +159,12 @@ function pageLoad() {
     contactWords.appendChild(address);
 
     const line1 = document.createElement('p');
-    line1.classList.add('line-1');
+    line1.classList.add('line', 'num1');
     line1.textContent = '94 S Grims Mill Rd.';
     address.appendChild(line1);
 
     const line2 = document.createElement('p');
-    line2.classList.add('line-2');
+    line2.classList.add('line', 'num2');
     line2.textContent = 'Boyertown, PA 19512';
     address.appendChild(line2);
 
@@ -185,3 +190,5 @@ function pageLoad() {
 }
 
 export { pageLoad };
+
+
