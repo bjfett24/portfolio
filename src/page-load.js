@@ -53,6 +53,11 @@ function pageLoad() {
   gitIcon.role = 'button';
   bioIcons.appendChild(gitIcon);
 
+  const linkedIn = new SVG('linked-in-icon', '0 0 24 24', "M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z");
+  const linkedInIcon = linkedIn.createSVG();
+  linkedInIcon.role = 'button';
+  bioIcons.appendChild(linkedInIcon);
+
   const section2 = document.createElement("div");
   section2.classList.add("section-2");
   content.appendChild(section2);
@@ -122,7 +127,7 @@ function pageLoad() {
     adminTitle.textContent = 'Admin Dashboard';
 
     const adminDesc = document.querySelector('.num3 .description');
-    adminDesc.textContent = "While not functional, this is an example of popular web page used for administrators. The admin dashboard is fully responsive and demonstrates a crisp style.";
+    adminDesc.textContent = "While not interactive, this is an example of popular web page used for administrators. The admin dashboard is fully responsive and demonstrates a crisp style.";
 
     const todoTitle = document.querySelector('.num4 .title');
     todoTitle.textContent = 'To-Do List App';
@@ -134,7 +139,7 @@ function pageLoad() {
     signUpTitle.textContent = 'Sign-Up Sheet';
 
     const signUpDesc = document.querySelector('.num5 .description');
-    signUpDesc.textContent = 'A stylish demonstration of using a form and input validation to simulate a sign-up sheet for a club.';
+    signUpDesc.textContent = 'A stylish demonstration of using a form and input validation to simulate a sign-up sheet for a social club.';
 
     const section3 = document.createElement('div');
     section3.classList.add('contact', 'container');
@@ -182,11 +187,37 @@ function pageLoad() {
     icons.classList.add('icons');
     contactWords.appendChild(icons);
 
+    const gitIcon2 = git.createSVG();
+    gitIcon2.role = "button";
+    icons.appendChild(gitIcon2);
+
+    const linkedInIcon2 = linkedIn.createSVG();
+    linkedInIcon2.role = 'button';
+    icons.appendChild(linkedInIcon2);
+
+
+    const gitIcons = document.querySelectorAll('.git-icon');
+    for (let g of gitIcons) {
+        g.addEventListener('click', () => {
+            window.open('https://github.com/bjfett24', "_blank");
+        })
+    }
+
+    const linkedInIcons = document.querySelectorAll('.linked-in-icon');
+    for (let l of linkedInIcons) {
+        l.addEventListener('click', () => {
+            window.open('https://www.linkedin.com/in/ben-fetterman-2a559b294/', "_blank");
+        })
+    }
+
+
     const picture = document.createElement('img');
     picture.src = footImgSrc;
     picture.alt = 'Ben standing with view of ocean in the background';
     picture.classList.add('picture');
     section3.appendChild(picture);
+
+
 }
 
 export { pageLoad };

@@ -65,13 +65,25 @@ body, :root {
 
 .bio .text {
     max-width: 60ch;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .bio .git-icon {
     color: black;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.bio .icons {
+    display: flex;
+    gap: 3px;
+    justify-content: end;
+}
+
+.bio .linked-in-icon {
+    color: black;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .name {
@@ -180,7 +192,7 @@ padding: 1rem;
 
 .contact .words {
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.714)
+    color: rgba(255, 255, 255, 0.789)
 }
 
 .contact .title {
@@ -194,6 +206,7 @@ padding: 1rem;
 
 .email {
     margin-top: 0px;
+    box-sizing: border-box;
 }
 
 .phone-number {
@@ -209,4 +222,24 @@ padding: 1rem;
 
 .note {
     max-width: 30ch;
+}
+
+.contact .icons {
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.contact .git-icon {
+    width: 3rem;
+    height: 3rem;
+    color: white;
+}
+
+.contact .linked-in-icon {
+    width: 3rem;
+    height: 3rem;
+    color: white;
 }
