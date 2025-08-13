@@ -192,7 +192,7 @@ padding: 1rem;
 
 .contact .words {
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.789)
+    color: rgba(255, 255, 255, 0.789);
 }
 
 .contact .title {
@@ -209,8 +209,41 @@ padding: 1rem;
     box-sizing: border-box;
 }
 
+.phone-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+
+}
+
+.phone-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba(255, 255, 255, 0.789);
+}
+
 .phone-number {
-    margin-bottom: 0px;
+    margin: 0px;
+}
+
+.email-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+
+}
+
+.email-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba(255, 255, 255, 0.789);
+}
+
+.email-address {
+    margin: 0px;
 }
 
 .picture {

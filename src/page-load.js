@@ -1,6 +1,7 @@
 import coverImgSrc from "./img/Profile.JPG";
 import footImgSrc from "./img/ben-guitar.jpg";
 import { SVG } from './create-svg.js';
+import { addClick } from './add-click.js';
 
 function pageLoad() {
   const content = document.createElement("div");
@@ -76,6 +77,7 @@ function pageLoad() {
     project.classList.add("project", `num${i}`);
     project.role = 'button';
     myWork.appendChild(project);
+    addClick(`num${i}`);
 
     const imgBox = document.createElement("div");
     imgBox.classList.add("image", "container");
@@ -173,15 +175,32 @@ function pageLoad() {
     line2.textContent = 'Boyertown, PA 19512';
     address.appendChild(line2);
 
-    const phone = document.createElement('p');
-    phone.classList.add('phone-number');
-    phone.textContent = '(610)-301-8193';
-    contactWords.appendChild(phone);
+    const phoneCont = document.createElement('div');
+    phoneCont.classList.add('phone-container');
+    contactWords.appendChild(phoneCont);
 
-    const email = document.createElement('p');
-    email.classList.add('email');
-    email.textContent = 'bjfett24@gmail.com';
-    contactWords.appendChild(email);
+    const phone = new SVG('phone-icon', '0 0 24 24', "M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z");
+    const phoneIcon = phone.createSVG();
+    phoneCont.appendChild(phoneIcon);
+
+    const phoneNum = document.createElement('p');
+    phoneNum.classList.add('phone-number');
+    phoneNum.textContent = '(610)-301-8193';
+    phoneCont.appendChild(phoneNum);
+
+    const emailCont = document.createElement('div');
+    emailCont.classList.add('email-container');
+    contactWords.appendChild(emailCont);
+
+    const email = new SVG('email-icon', '0 0 24 24', "M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z");
+    const emailIcon = email.createSVG();
+    emailCont.appendChild(emailIcon);
+
+
+    const emailAdd = document.createElement('p');
+    emailAdd.classList.add('email-address');
+    emailAdd.textContent = 'bjfett24@gmail.com';
+    emailCont.appendChild(emailAdd);
 
     const icons = document.createElement('div');
     icons.classList.add('icons');
