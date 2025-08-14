@@ -117,7 +117,7 @@ function pageLoad() {
     tttTitle.textContent = 'Tic Tac Toe';
 
     const tttDesc = document.querySelector('.num1 .description');
-    tttDesc.textContent = 'A simple, yet sharp version of the classic game, Tic Tac Toe. Play against a friend and this program will keep track of whose turn it is and declare the winner of the game!';
+    tttDesc.textContent = 'A simple, yet sharp version of the classic game. Play against a friend and this program will keep track of whose turn it is and declare the winner of the game!';
 
     const battleShipsTitle = document.querySelector('.num2 .title');
     battleShipsTitle.textContent = 'Battle Ship';
